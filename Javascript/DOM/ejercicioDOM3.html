@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Primera lista</h2>
+    <ul><strong></strong></ul>
+
+    <h2>Segunda lista</h2>
+    <ul></ul>
+
+    <h2>Tercera lista</h2>
+    <ul></ul>
+
+    <script>
+        var secciones = new Array("Home", "Quienes Somos", "Galeria", "Perico de los Palotes", 'Mariano', "Contacto")
+        // var lista = document.getElementsByTagName("ul");
+
+        function for1() {
+            let texto = ""
+            for (const elemento of secciones) {
+                texto += "<li>" + elemento + "</li>";
+                // COMILLAS FRANCESAS MOTHERFUCKER
+            }
+            return texto;
+        }
+        function for2() {
+            let texto = ""
+            for (let i = 0; i < secciones.length; i++) {
+                texto += "<li>" + secciones[i] + "</li>"
+            }
+            console.log(texto)
+            return texto;
+        }
+        function for3() {
+            let texto = ""
+            secciones.forEach(elemento => {
+                texto += "<li>" + elemento + "</li>";
+            })
+            console.log(texto)
+            return texto;
+
+        }
+
+        dibujar(for1(), 0)
+        dibujar(for2(), 1)
+        dibujar(for3(), 2)
+
+
+        function dibujar(texto, posicion) {
+            lista = document.getElementsByTagName("ul");
+            lista[posicion].innerHTML = texto
+            // lista[posicion].innerHTML = textofrances
+        }
+
+    </script>
+</body>
+
+</html>

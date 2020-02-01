@@ -1,0 +1,20 @@
+<app-cabecera></app-cabecera>
+
+
+
+<div class="container no-gutters">
+  <div class="row">
+    <div class="col-8">
+      <app-lista-productos (productoPinchado)="elementoPinchado($event)" titulo="Comida" [productos]="arrComida">
+      </app-lista-productos>
+      <app-lista-productos (productoPinchado)="elementoPinchado($event)" titulo="Bebida" [productos]="arrBebida">
+      </app-lista-productos>
+    </div>
+    <div class="col-4">
+
+
+      <app-panel-derecho [arrayProductos]="productosSeleccionados">
+      </app-panel-derecho>
+    </div>
+  </div>
+</div>

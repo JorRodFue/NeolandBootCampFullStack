@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function dameNumero() {
+            do {
+                var numero = parseInt(prompt("Dame un numero positivo"));
+            }
+            while (numero < 1 || isNaN(numero))
+            return numero;
+
+        }
+
+        function factorial(numero) {
+            let factorial = 1;
+            for (let i = numero; i > 0; i--) {
+                factorial = factorial * i;
+            }
+            console.log("El factorial de " + numero + " es " + factorial)
+            return factorial;
+        }
+        factorial(dameNumero());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+       * {
+            margin:0;
+        padding: 0;
+        box-sizing:border-box;}
+    header{
+        width:100%;
+        background-color:black;
+        color:white;
+        padding:1rem;
+    }
+
+    header a{color:white;
+    text-decoration:none;}
+    
+    header nav ul{list-style:none;
+        padding:10px;
+       
+
+    }
+
+    header nav ul li{display:inline-blocK;
+   }
+
+    header nav>div{
+        float:left;
+        }
+        header nav ul {float:right;}
+
+        
+main section{display:flex;
+flex-direction:row;
+flex-wrap:wrap;}
+
+    main section article{background-color:red;
+    height:50px;
+    width:25%;
+    border:1px solid black;
+    /*flex-grow:1;*/}
+
+    .row:after{content:"";
+    clear:both;
+    height:0px;
+    display:block;}
+
+    main section article:nth-child(2) , main section article:nth-child(5){width:50%;}
+    /*.doble {
+  flex-grow:2; /* default 0 }*/
+    .caja2 {width:900px;
+    display:flex;
+margin:10px auto;}
+    */
+    </style>
+</head>
+<body>
+    <header class="row">    
+        <nav>
+            <div><h1>LOGO</h1></div>
+            <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+        <li><a href="#">Enlace 4</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+<section>
+    <article>a</article>
+    <article class="doble">a</article>
+    <article>a</article>
+    <div class="caja2">
+    <article>a</article>
+    <article class="doble">a</article>
+    <article>a</article>
+    </div>
+</section>
+
+    </main>
+</body>
+</html>

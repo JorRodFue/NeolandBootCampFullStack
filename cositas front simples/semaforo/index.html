@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+
+*{box-sizing:border-box;}
+#wrapper{
+        position:relative;
+        margin:auto;
+        max-width:800px;
+        border:2px solid black;
+        padding:50px;
+    }
+
+.circulo{
+height:100px;
+width:100px;
+border-radius:50%;
+margin:50px auto;
+
+}
+
+ #cuerpo{width:40%;
+ border:2px solid green;
+ background-color:darkgreen;
+ height:500px;
+ margin:-100px auto ;}   
+
+ #tronco{width:100px;;
+ border:2px solid black;
+ height:400px;
+ background-color:darkgreen;
+ margin: 100px auto;}
+
+ #pie{width:60%;;
+ border:2px solid black;
+ height:50px;
+ background-color:green;
+ margin:-100px auto;}
+
+.rojo{background-color:red;
+position:relative;
+z-index:1; }
+.amarillo{background-color:yellow; }
+.verde{background-color:green; }
+.alto{ background-color:darkgreen;
+width:150px;
+   
+transform:scale(1.5);}
+
+
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+<div class="circulo alto"></div>
+<div id="cuerpo">
+<div class="circulo rojo"></div> 
+<div class="circulo amarillo"></div> 
+<div class="circulo verde"></div> 
+
+</div>
+<div id="tronco"></div>
+<div id="pie"></div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let _edad = 100;
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        var pepe = fruits.push("Elefante", "Pop", "Monstruo")
+        fruits.pop();
+
+        var vino = fruits.unshift("Lower", "Caballo")
+
+        var verduras = new Array('Lechuga', 'Pimientos', 'Guisantes')
+        var carnes = ['Pollo', 'Ternera']
+        var pescados = ['Lubina', 'Merluza']
+
+        //opcion 1&2
+        var listacompra = carnes.concat(pescados.concat(verduras));
+        //opcion 3
+        listacompra = carnes.concat(pescados).concat(verduras)
+        console.log(listacompra.reverse().reverse())
+        console.log(listacompra)
+        //ES6 spread operator [...variable]
+        var listaInvertida = [...listacompra].reverse();
+        console.log(listaInvertida, listacompra)
+        //index of devuelve posicion de elemento en el array o -1
+        var lista = ["Mariano", "Rajoy", "Brey", "Rajoy"]
+        console.log(lista.lastIndexOf("Rajoy"))
+
+        // FILTER - me devuelve un array de uno o más elementos que cumplan la condicion de filtado dentro de una funcion
+        var listaNotas = [2, 3, 2, 4, 5, 6, 7, 10, 4, 5, 6, 2, 1, 0]
+
+        var listaAprobados = new Array();
+        listaAprobados = listaNotas.filter(buscarAprobados);
+
+        function buscarAprobados(nota) { return nota > 5 }
+
+        var listasuspensos = listaNotas.filter(function (elemento) { return elemento < 5 })
+
+        console.log(listasuspensos)
+
+        //ARROW FUNCTION
+
+        listasuspensos = listaNotas.filter(elemento => { elemento < 5 })
+
+        console.log(listasuspensos)
+        listaNotas.forEach(element => {
+
+
+        });
+
+
+        var listaNotas = new Array(
+            {
+                nombre: "Juan",
+                nota: 2
+            }
+            ,
+            {
+                nombre: "Ricardo",
+                nota: 7.5
+            }
+            ,
+            {
+                nombre: "Diego",
+                nota: 2
+            }
+        );
+
+        var primerAprobado = listaNotas.find(function (alumno) { return alumno.nota >= 5 })
+
+        primerSuspenso = listaNotas.find(alumno => alumno.nota < 5);
+
+        console.log(primerAprobado, primerSuspenso)
+
+        var listaAlumnos = new Array();
+        listaAlumnos = listaNotas;
+
+        for (const alumno of listaAlumnos) {
+            console.log(alumno.nombre)
+
+        }
+        listaAlumnos.forEach(alumnos => {
+            console.log(alumnos.nombre)
+        });
+
+
+        //METODO JOIN & SPLIT
+        // JOIN ARRAYs to STRING
+        // SPLIT STRINGs to ARRAY
+
+        var listaAnimales = new Array('Leon', 'Perro', 'Gato')
+
+        var stringAnimales1 = listaAnimales.join();
+        var stringAnimales1 = listaAnimales.join('/\\');
+        console.log(listaAnimales, stringAnimales1)
+
+        console.log(stringAnimales1.split('/\\'))
+
+        //METODO SPLICE (n,s,valor)
+
+        // n posicion inicial
+        // s cantidad de elementos que eliminas
+        // valor 
+
+        var listMeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto"]
+
+
+        listMeses.splice(2, 0, "Febrerillo", "Bootcamp")
+        console.log(listMeses)
+
+
+
+        //SORT
+        var listaNumeros = [2, 3, 2, 4, 5, 6, 7, 10, 4, 5, 6, 2, 1, 0]
+
+        console.log([...listMeses].sort())
+        var arrayOrdenado = [...listaNumeros].sort((a, b) => b - a)
+        console.log(listaNumeros)
+        // spread operator
+
+    </script>
+
+</body>
+
+</html>

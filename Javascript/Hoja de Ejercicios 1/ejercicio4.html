@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function pedirNumeros() {
+            var arraydeNumeros = new Array()
+
+            do {
+                var numero = parseInt(prompt("Dame un numero (0 o letras = ACABAR)"));
+                numero = (isNaN(numero)) ? 0 : numero;
+                arraydeNumeros.push(numero);
+            }
+            while (numero != 0)
+            // arraydeNumero.pop(numero);
+            // // LE QUITO EL CERO AL ARRAY
+            return arraydeNumeros;
+        }
+
+        function contarNumeros(arraydeNumeros) {
+            let valoresNOzero = 0;
+            for (const elemento of arraydeNumeros) {
+                console.log(elemento)
+                valoresNOzero = (elemento != 0) ? valoresNOzero + 1 : valoresNOzero
+            }
+            console.log("Numero de valores distintos de cero: " + valoresNOzero)
+
+        }
+
+        contarNumeros(pedirNumeros())
+    </script>
+</body>
+
+</html>

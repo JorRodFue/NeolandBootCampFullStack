@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  form.form(action="/personas/update" , method="POST" , class="form-group")
+    div.form-group
+         input.form-control(name="id" ,  type="hidden" , value=persona.id)
+    div.form-group
+        label Nombre
+        input.form-control(name="nombre" ,  type="text" , value=persona.nombre)
+    div.form-group
+        label Apellidos
+        input.form-control(name="apellidos", type="text" , value=persona.apellidos)
+    div.form-group
+        label Email
+        input.form-control(name="email", type="text" , value=persona.email)        
+    div.form-group
+        label Edad
+        input.form-control(name="edad", type="number" , value=persona.edad)    
+    div.form-group    
+        input.btn-btn-failure(type="submit")

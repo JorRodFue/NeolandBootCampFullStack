@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label>Nombre Tarea</label>
+                <input type="text" class="form-control" [(ngModel)]="formulario.nombre">
+            </div>
+            <div class="col-8">
+                <div class="form-group"> <label>Prioridad Tarea</label>
+
+                    <select [(ngModel)]="formulario.prioridad">
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button (click)="pulsarBoton($event)">ENVIAR</button>
+
+    <!-- <div>{{tareas | json}}</div>
+
+
+
+
+
+    <li *ngFor="let item of tareas; index as i; trackBy: trackByFn">{{i}} ++ {{item.nombre}}
+        ++ {{item.prioridad}}</li> -->
+
+    <div [innerHTML]="resultado"></div>
+
+</div>

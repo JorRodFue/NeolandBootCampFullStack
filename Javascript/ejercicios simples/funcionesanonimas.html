@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>    
+    
+    //una funcion que siempre tiene un return
+    
+    var paridad = function(numero){
+        return (numero %2 == 0) ?"par" :"impar";
+    }    
+
+    //funciones de parametros indefinidos
+
+    media (2, 6);
+    media (2, 4, 5 ,6 , 78, 9 , 4, 32, 34)
+    media (2, 4, 5 ,6 , 78, 9 , 4, 32, 34, media (2,6))
+
+    // IMPORTANTE la definicion de una funcion de este tipo no admite nombres de parametros
+    function media(){
+        let size = arguments.length;
+        let total=0;
+        for (let i=0;i<=size-1;i++){
+            total = total + arguments[i]
+        }
+        return (total/size);
+
+
+    }
+
+    function toUpper(frase){
+
+    let salida="";
+    let size=frase.length;
+    for (let i=0; i < size; i++){
+    salida += frase.charAt(i).toUpperCase();
+    };
+    return salida;
+    }
+
+    function reverse(frase){
+
+        let salida="";
+        let size=frase.length;
+        for (let i=size-1; i >= 0 ;i--){
+        salida += frase[i];
+        };
+      return salida;
+      }
+
+    console.log(toUpper("hola ke ase"));
+    console.log(reverse("hola ke ase"));
+
+//realizar una funcion que reciba n numeros y me cree una cadena de caracters con solo los numero impares 
+
+let entrada = [1,23,5,6,8,9,3,4,5,2,7];
+
+function arrayToNumber(matriz){}
+
+// if (Array.isArray(elemento){
+
+
+function magic(){
+        let size=arguments.length;
+        let salida="";
+        for (let i=0; i<=size-1; i++){
+            let elemento = arguments[i];
+            if (elemento ==3 ) return salida
+            if (Array.isArray(elemento)){
+               let size2=elemento.length;
+               for (let j=0; j<=size2-1; j++){
+                elementoactual=elemento[j];
+                salida = evaluar(elementoactual, salida)
+                }
+             }   
+            else salida = evaluar(elemento, salida)
+        }
+        return salida;         
+
+             
+        }
+
+
+function evaluar(entrada, salida){
+    salida = (entrada %2 !=0) ? salida + entrada.toString() +", " : salida;
+    return salida
+
+}
+        
+console.log (magic(1,23,5,6,8,9,3,4,5,2,7))
+console.log (magic(entrada));
+
+let alumnos =["Tom", "Dick","Harry"];
+alumnos [4] = "Pepe";
+console.log (alumnos)
+let texto="<ul>";
+for (let i=0; i<alumnos.length;i++){
+    texto = texto + "<li>" + alumnos[i] + "</li>";
+}
+texto += "</ul>"
+document.write(texto);
+console.log(texto);
+    </script>
+</body>
+</html>

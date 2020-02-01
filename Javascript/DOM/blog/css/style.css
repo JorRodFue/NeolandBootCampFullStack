@@ -1,0 +1,29 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+
+#noticias{display:flex;
+flex-wrap:wrap;}
+
+img {
+    width:100%;
+    height:auto;
+}
+
+#noticias article{
+    padding:20px;
+    border:1px solid gray;
+    width:30%;
+    margin:10px;
+
+
+}
+
+@media (max-width:640px){
+    #noticias article{
+
+    width:100%;
+}
+}

@@ -1,0 +1,11 @@
+<p>{{titulo}}</p>
+
+<div class="contenedorProductos">
+    <ul>
+        <li class="col-3" *ngFor="let producto of productos">
+            <!-- {{producto.nombre}} -->
+            <img class="img-fluid" [src]=producto.imagen (click)="elementoPinchado(producto)">
+            {{producto.precio.toFixed(2)}}
+        </li>
+    </ul>
+</div>

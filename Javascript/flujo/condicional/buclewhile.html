@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var cuadrado;
+
+        var ancho, alto;
+        var numero = prompt('Dame cuadrados');
+
+        var cuad = '<div style="background-color:';
+        
+        ancho = 200;
+        alto= 250;
+
+        var drado ='; width:'+ancho + 'px; height:'+alto+'px"></div>'
+
+        let color
+        
+
+        let i=1;
+        
+       
+        for (i=1;i<=numero;i++){
+            console.log(i);
+        color = (i%2==1) ? 'red ' : 'green ';
+
+          document.write(cuad+color+drado);
+        }
+        
+    
+    // var numero = parseInt(prompt('Introduce número'));
+    
+    
+
+   
+    
+    
+    </script>
+</body>
+</html>

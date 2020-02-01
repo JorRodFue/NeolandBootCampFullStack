@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    
+    let numeroAleatorio = Math.random() * 1000
+
+    let matriz = generarMatriz()
+
+    let maximo=0;
+
+    // NaN + 1 = NaN
+
+    // incializar la matriz
+
+    function sacarNumeroRepetido(lista, numero){
+    let contador=0
+            {for (let i=0; i<lista.length; i++)
+                {
+                  if (lista[i]==numero) contador++
+                }
+            return contador;
+            }
+    }
+
+function generarMatriz(){
+    let matriz = new Array()
+    let instancias = new Array()
+   for (let i=0; i<=1000; i++){
+        instancias[i]=0;
+                                }
+for (let i=0; i<=1000; i++){
+    let numeroaleatorio = parseInt(Math.random() * 1000);
+    matriz[i]=numeroaleatorio;
+    instancias[numeroaleatorio]++
+    // if (numeroaleatorio>maximo) maximo=numeroaleatorio
+}
+    return matriz;  
+}
+
+let numeroinput = parseInt(prompt("elige numero a consultar"))
+console.log(sacarNumeroRepetido(matriz, numeroinput))
+
+for (const key in producto) {
+    if (producto.hasOwnProperty(key)) {
+        const elemento = producto.key;
+        
+    }
+}
+    </script>
+</body>
+</html>

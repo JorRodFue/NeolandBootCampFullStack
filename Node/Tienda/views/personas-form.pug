@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  form.form(action="/personas/create" , method="POST" , class="form-group")
+    div.form-group
+        label Nombre
+        input.form-control(name="nombre" ,  type="text" , value="nombre.formulario")
+    div.form-group
+        label Apellidos
+        input.form-control(name="apellidos", type="text" , value="apellidos.formulario")
+    div.form-group
+        label Email
+        input.form-control(name="email", type="text" , value="email.formulario")        
+    div.form-group
+        label Edad
+        input.form-control(name="edad", type="number" , value=33)    
+    div.form-group    
+        input.btn-btn-failure(type="submit")

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dameNumero() {
+
+            var numero = parseInt(prompt("Dame un numero"));
+            return numero;
+        }
+
+
+        function calcularMultiplos(numero, n_multiplos = 10) {
+            var arraydeNumeros = new Array();
+            for (i = 0; i < n_multiplos; i++) { arraydeNumeros[i] = numero * i }
+            return arraydeNumeros;
+        }
+
+        function calcularSuma(arraydeNumeros) {
+            let suma = 0;
+            for (const elemento of arraydeNumeros) {
+                suma = suma + elemento;
+            }
+            return suma;
+        }
+
+        console.log(calcularMultiplos(dameNumero()), calcularSuma(calcularMultiplos(10)));
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        *{box-sizing:border-box;}
+    div {
+        background-color:red;
+    display:inline-block;
+    }
+
+section{padding:0;
+ margin-top:-6px;
+}
+
+    </style>
+    
+    <script>
+    //poder generar un tablero pero quiero poder elegir cuantas casillas y de que tamaño
+
+    let numerocasillas=9;
+    let size=40;
+    let texto="";
+    let color='black';
+    let color1="black";
+    let color2="red";
+
+function dibujarFila(numerocasillas, size, color1, color2){
+    for (let i=1;i<=numerocasillas;i++){
+    texto += '<div style="width:' + size + '; height:' + size + '; background-color:' + color +'"></div>'
+// ALTERNAR COLOR INTRAFILA
+    color = (color == color1) ?  color2 : color1;
+}
+document.write(texto);
+}
+
+    function dibujarTablero(numerocasillas, size, color1, color2){
+        size=size.toString()+'px';
+         for (let j=1;j<=numerocasillas;j++){
+             dibujarFila(numerocasillas, size, color1, color2)
+           
+        console.log(texto);
+        texto=""
+        // SALTO DE COLOR EN NUEVA FILA
+        if (numerocasillas%2 ==0) color = (color == color1) ?  color2 : color1;
+        document.write("<section></section>");
+        console.log(texto);
+       }
+        }
+  dibujarTablero(8, 90, "black" , "red");
+ </script>
+</body>
+</html>

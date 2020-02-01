@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Control de stock</title>
+</head>
+<body>
+
+    <script>
+    //crear un espacio para almacenar el total del stock
+    var stock = 125;
+    //necesito una funcion que me muestre el total del stock por consola
+    function dimeStock(){
+        console.log(stock);
+    }
+    dimeStock();
+    //aumentar stock en una cantidad cualquiera
+    function addStock(cantidad)
+    {
+        stock+=cantidad;
+        dimeStock();
+    }
+    //quiero poder comprar un numero n de productos
+
+    function comprarProducto(cantidad){
+        if (cantidad>stock) {return "No hay suficientes productos" }
+        stock-=cantidad;
+        console.log("comprados")
+        dimeStock();
+        console.log (comprobarStock());
+    }
+    
+
+    function comprobarStock(){
+        // var comprobacion = (stock<=5) ?"Te quedan 5 productos o menos" : "Hay stock suficiente";
+        // return comprobacion;
+
+        if (stock<=5){
+            addStock(100);
+            return "se han comprado 100 unidades por falta de stock"
+        }
+        return "Stock suficiente"
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>

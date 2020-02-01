@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="seccion1">Elegir CENA
+        <select id="Select"><label></lable>
+                <option value="Carne">CARNE</option>
+                <option value="Pescado">PESCADO</option>
+        </select>
+    </div>
+    <div id="seccion2" class="oculta">
+        <form id="postre">
+            <label> <input type="radio" onchange="seleccion2()" name="postre" value="SI"> CON Postre</label>
+            <label> <input type="radio" onchange="seleccion2()" name="postre" value="NO" checked> SIN Postre </label>
+        </form>
+    </div>
+
+    <div>
+        <p>Precio final:</p>
+        <p id="precio"></p>
+    </div>
+    <script src="js/ejercicio7.js"></script>
+
+    <!-- Escribir un programa donde el usuario elija entre lo siguiente ¿Qué desea cenar? Y pueda poner dos opciones Carne o
+    PescadoY luego se le pregunte también si desea o no postreSi eligió cenar Carne->pago 23 €Si eligió cenar
+    Pescado->pago 15 €Si tomo postre->el postre valió 3 €Calcular el valor total de la cena dependiendo de las opciones
+    que elija por teclado el usuario, incluyendo una propina del 6% -->
+
+</body>
+
+</html>

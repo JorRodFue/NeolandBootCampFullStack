@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12">
+        <label>Nombre empleado</label>
+        <input type="text" placeholder="Mete nombre" value="Nombre" class="form-control"
+            [(ngModel)]="formulario.nombre">
+    </div>
+    <div class="col-12">
+        <label>Apellido empleado</label>
+        <input type="text" placeholder="Mete Apellido" value="Apellido" class="form-control"
+            [(ngModel)]="formulario.apellido">
+    </div>
+    <div class="col-12">
+        <label>DNI empleado</label>
+        <input type="text" placeholder="Mete DNI" value="DNI" class="form-control" [(ngModel)]="formulario.DNI">
+    </div>
+    <div class="col-12">
+        <label>Departamento empleado</label>
+        <input type="text" placeholder="Mete departamento" value="departamento" class="form-control"
+            [(ngModel)]="formulario.departamento">
+    </div>
+    <div class="col-12">
+        <label>Email empleado</label>
+        <input type="text" placeholder="Mete Email" value="Email" class="form-control" [(ngModel)]="formulario.email">
+    </div>
+    <!-- <div class="col-12">
+            <label>Imagen empleado</label>
+            <input type="text" placeholder="Mete Imagen" value="Imagen" class="form-control"
+                [(ngModel)]="formulario.imagen">
+        </div> -->
+</div>
+
+<div>
+
+    <button (click)="enviar()" class="btn">ENVIAR</button>
+</div>

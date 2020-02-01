@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class=cuadrado></div>
+    <script src="archivos/jquery-3.4.1.min.js">    </script>
+    <script src="  https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script>
+
+        // ocultar y mostrar
+        // $(".cuadrado").hide(1000)
+        // $(".cuadrado").delay(3000).show(1000)
+
+        //fades
+        // $(".cuadrado").fadeOut(10000, function () { alert("Se acabó") })
+        var cuad = $(".cuadrado")
+
+        // cuad.fadeOut(1000)
+
+        // cuad.fadeIn(5000)
+
+        // cuad.fadeTo(1000, 0.3)
+
+
+        //slide
+
+
+        // cuad.slideUp(1000)
+        // cuad.slideDown(1000)
+
+        //animate
+
+        cuad.animate({ "margin-left": "500px" }, 3000, "easeOutElastic").delay(2000).animate({ "margin-top": "500px" }, 3000, "easeOutElastic")
+
+
+
+
+    </script>
+
+</body>
+
+</html>

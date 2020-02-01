@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 5</title>
+</head>
+
+<style>
+    .cuadrado {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        margin-left: 0px;
+        margin-top: 0px;
+        transition-duration: 0.3s;
+    }
+</style>
+
+<body>
+    <button>IZQUIERDA</button>
+    <button>DERECHA</button>
+    <button>ARRIBA</button>
+    <button>ABAJO</button>
+    <hr>
+    <div>
+        <div class="cuadrado"></div>
+    </div>
+
+
+    <script>
+
+        var botones = document.querySelectorAll("button");
+        for (const boton of botones) {
+            boton.addEventListener("click", moverCuadrado)
+        }
+        var cuadrado = document.querySelector(".cuadrado")
+        console.log(cuadrado.style)
+        var posicionX = cuadrado.style.marginLeft.valueOf()
+        var posicionY = cuadrado.style.marginTop.valueOf()
+
+        console.log(posicionX)
+
+
+
+        // var posicionX = cuadrado.offsetLeft;
+
+
+
+        function moverCuadrado(event) {
+            objeto = event.target;
+            switch (objeto.innerText) {
+                case "IZQUIERDA": {
+                    posicionX = posicionX - 5
+                    break;
+                }
+                case "DERECHA": {
+                    posicionX = posicionX + 5
+                    break;
+                }
+                case "ARRIBA": {
+                    posicionY = posicionY - 5
+                    break;
+                }
+                case "ABAJO": {
+                    posicionY = posicionY + 5
+                    break;
+                }
+            }
+            moverFisicamente(posicionX, posicionY)
+        }
+
+
+        function moverFisicamente(posicionX, posicionY) {
+            console.log(posicionX);
+            console.log(posicionY);
+            cuadrado.style.marginLeft = posicionX + "px";
+            cuadrado.style.marginTop = posicionY + "px";
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

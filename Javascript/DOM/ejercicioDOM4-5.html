@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <ul class="menu">
+            <li>Home</li>
+            <li>Quienes Somos</li>
+            <li>Contacto</li>
+        </ul>
+
+        <ul>
+            <li>Categorias</li>
+            <li>Etiquetas</li>
+        </ul>
+    </div>
+
+    <!-- DOM 5 -->
+
+    <p class="libro">Don Quijote de la Mancha</p>
+    <p class="refran">Con cien cañones por Banda</p>
+    <p class="libro">Erase una vez la tierra</p>
+
+    <script>
+        let parrafos = document.getElementsByTagName("p");
+        for (const parrafo of parrafos) {
+            //SOLO QUIERO LOS CLASS QUE TAMBIEN SON DE P, NO TODOS
+            // let textos = parrafo[0].getElementsByClassName("libro")
+            // NO FUNCIONA ,
+            //  COMO SELECCIONO LOS CLASS que estan bajo un TAG????
+            // let texto = parrafo.getElementsByClassName("libro");
+
+            // CON IF
+            // if (parrafo.className == "libro") parrafo.innerHTML = parrafo.innerHTML.toLowerCase()
+            // if (parrafo.className == "refran") parrafo.innerHTML = parrafo.innerHTML.toUpperCase()
+
+            // CON SWITCH
+            switch (parrafo.className) {
+                case "libro": {
+                    parrafo.innerHTML = parrafo.innerHTML.toLowerCase();
+                    break;
+                } case "refran": {
+                    parrafo.innerHTML = parrafo.innerHTML.toUpperCase();
+                    break;
+                }
+            }
+        }
+
+
+
+
+        var listados = document.getElementsByClassName("menu");
+
+        var miUl = listados[0];
+
+        var lis = miUl.getElementsByTagName("li");
+
+        for (const element of lis) {
+
+        }
+
+    </script>
+</body>
+
+</html>

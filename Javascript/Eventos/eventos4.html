@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="titulo"></h1>
+
+    <ul id="menu">
+        <li>Juan</li>
+        <li>Pedro</li>
+        <li>Pablo</li>
+
+    </ul>
+</body>
+
+<script>
+    var botones = document.querySelectorAll("#menu li")
+    for (const boton of botones) {
+        boton.addEventListener("click", cargarNombre)
+    }
+
+    function cargarNombre(e) {
+        console.log("entre")
+        let objeto = e.target
+        objeto.style.color = "red";
+        document.getElementById("titulo").innerText = objeto.innerText;
+    }
+
+</script>
+
+</html>

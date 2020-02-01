@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <form onsubmit="hazcosas(); return false;">
+<input type="number" id="valor1">
+<input type="number" id="valor2">
+<input type="text" id="result" value="resultado">
+<input type="submit">
+   </form>
+
+    <div id="resultado">Resultado</div> -->
+
+<script>
+
+    //pintar una figura a elegir entre cuadrado y circulo de cualquier color y cualquier medida
+
+
+function crearFigura(medidas, color, tipo){
+let constructor = (tipo=="circulo") ? "border-radius:50%;" : "";
+
+ let escribir = '<div style="background-color: ' + color + '; width: ' + medidas + 'px;' + ' height: ' + medidas + 'px;' + constructor +'"></div>'
+ document.write(escribir);
+ console.log (escribir);
+}
+
+crearFigura (100, 'red', 'circulo');
+crearFigura (300, 'green', 'cuadrado');
+
+
+</script>
+</body>
+</html>

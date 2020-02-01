@@ -1,0 +1,37 @@
+* { padding: 0; margin: 0; box-sizing:border-box;}
+body {background-color:grey;}
+
+
+.contenedor{
+    max-width:400px;
+    max-height:400px;
+    overflow:hidden; 
+    margin:0 auto;
+    position:relative;
+}
+
+.contenedor img{   
+    max-width:100%;
+    height:auto;
+}
+
+.contenedor .info{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:100%;
+    left:0px;
+   color:white;
+   background-color:rgba(0,0,0,0.5);
+   text-align:center;
+   padding:25px 0px;
+}
+
+
+.rotateScale{
+    transform: rotateZ(10deg) scale(1.5);
+    transition-duration:1s; }
+
+
+.imagen{
+    transition: transform 1s;}

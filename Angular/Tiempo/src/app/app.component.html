@@ -1,0 +1,11 @@
+<reloj segundos="1200" identificador="reloj1" (avisar)="manejarAviso($event)">
+</reloj>
+<reloj segundos="6500" identificador="reloj2" (avisar)="manejarAviso($event)">
+</reloj>
+<reloj segundos="33" identificador="reloj3" (avisar)="manejarAviso($event)">
+</reloj>
+<ul>
+    <li *ngFor="let aviso of avisos">
+        {{aviso.identificador}} -- {{aviso.tiempo}}
+    </li>
+</ul>

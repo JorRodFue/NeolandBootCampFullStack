@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="http://www.yahoo.es">Yahoo</a></li>
+        <li><a href="http://www.google.es">Google</a></li>
+        <li><a href="http://www.Amazon.es">Amazon</a></li>
+
+    </ul>
+
+    <script>
+        var menu = document.getElementById("menu");
+        var enlaces = menu.getElementsByTagName("a");
+
+        for (const enlace of enlaces) {
+            enlace.href = "http://cnn.com";
+            enlace.title = "Enlace juanquer"
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

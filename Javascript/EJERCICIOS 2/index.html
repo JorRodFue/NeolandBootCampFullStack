@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="cs/styles.css">
+</head>
+
+<body>
+    <div>
+        Nombre : <input type="text" name="" id="inputNombre" placeholder="Introduce el nombre">
+    </div>
+    <div>
+        <input type="text" name="" id="inputAficion" placeholder="Introudce una aficion">
+    </div>
+
+    <button id="btnGuardar">GUARDAR</button>
+    <button id="btnReset">RESET</button>
+
+    <hr>
+    <div>
+        <ul id="lista">
+
+        </ul>
+
+    </div>
+
+    <script>
+        var listaAficiones = [];
+
+        var lista = document.getElementById('lista');
+        var inputNombre = document.getElementById('inputNombre');
+        var inputAficion = document.getElementById('inputAficion');
+
+        var btnGuardar = document.getElementById('btnGuardar');
+        btnGuardar.addEventListener('click', pulsarGuardar);
+
+        var btnReset = document.getElementById('btnReset');
+        btnReset.addEventListener('click', pulsarReset);
+
+        function pulsarGuardar(e) {
+            var valueNombre = inputNombre.value;
+            var valueAficion = inputAficion.value;
+
+            // Compruebo si el nombre está dentro del array
+            var elemEncontrado = listaAficiones.find(function (item) {
+                return valueNombre === item.nombre;
+            });
+
+            if (!elemEncontrado) {
+                // Si no está agrego un nuevo elemento
+                var registro = {
+                    nombre: valueNombre,
+                    aficiones: [valueAficion]
+                }
+                listaAficiones.push(registro);
+            } else {
+                elemEncontrado.aficiones.push(valueAficion);
+            }
+
+            pintarRegistro();
+            pulsarReset();
+        }
+
+        function pulsarReset(e) {
+            inputNombre.value = "";
+            inputAficion.value = "";
+        }
+
+        function pintarRegistro() {
+            var li = document.createElement('li');
+            var ultElemento = listaAficiones[listaAficiones.length - 1];
+            li.innerHTML = `<strong>${ultElemento.nombre}: </strong> ${ultElemento.aficiones.join(',')}`;
+            lista.appendChild(li);
+        }
+
+
+    </script>
+
+</body>
+
+
+
+</html>

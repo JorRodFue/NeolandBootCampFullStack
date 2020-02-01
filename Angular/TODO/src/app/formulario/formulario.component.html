@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <label>Mensaje de tarea</label>
+            <input type="text" placeholder="Mete nombre" value="Tarea nueva" class="form-control"
+                [(ngModel)]="formulario.mensaje">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label>Prioridad de Tarea</label>
+                <select [value]='ALTA' [(ngModel)]="formulario.prioridad">
+                    <option value="ALTA">ALTA</option>
+                    <option value="NORMAL">NORMAL</option>
+                    <option value="BAJA">BAJA</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <button (click)="enviar()">ENVIAR</button>
+</div>

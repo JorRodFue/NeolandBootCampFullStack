@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 12 & 13</title>
+</head>
+
+<body>
+
+
+    <script>
+        // var cuadrado = "<div style='background-color:red; width:100px; height:100px'></div>"
+        // document.body.innerHTML = cuadrado;
+
+        var cuadrado = document.createElement("div");
+        var texto = document.createTextNode("Cuadrado")
+
+        document.body.appendChild(cuadrado)
+        cuadrado.appendChild(texto)
+        cuadrado.style.backgroundColor = "red";
+        cuadrado.style.width = "100px";
+        cuadrado.style.height = "100px";
+
+        // DOM 13
+
+        var listaPersonas = new Array("Pepe", "Lucia", "Raul", "Gema", "Juan");
+        //crear una lista no ordenada cuyos elementos sean los miembros de la lista
+
+        document.body.appendChild(lista);
+
+        var lista = document.createElement("ul")
+        for (const persona of listaPersonas) {
+            var li = document.createElement("li")
+            var texto = document.createTextNode(persona)
+            lista.appendChild(li);
+            li.appendChild(texto);
+
+        }
+
+
+    </script>
+</body>
+
+</html>

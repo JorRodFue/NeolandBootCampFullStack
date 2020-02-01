@@ -1,0 +1,18 @@
+<p>Percha works</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+
+            <div id="formulario">
+                <app-formulario (enviado)="procesarEnvio($event)"></app-formulario>
+            </div>
+        </div>
+        <div class="col-6">
+            <div id="lista">
+                <app-lista [listaTareas]="listaTareas"></app-lista>
+            </div>
+        </div>
+
+    </div>
+</div>

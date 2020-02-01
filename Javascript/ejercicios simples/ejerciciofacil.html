@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Levantar el animo</title>
+</head>
+<body>
+
+    <div id="resultado"></div>
+    
+
+    <script>
+    
+    //crear una funcion que me permita crear una suma de numeros en serie
+
+
+    function SumarComplicandoseLaVida(numero, veces)
+    {let numeroacumulado=0;
+        for (let i=1;i<=veces;i++){
+            numeroacumulado+=numero;
+        }
+        return numeroacumulado
+    }
+
+
+    document.getElementById("resultado").innerHTML=SumarComplicandoseLaVida(4,4); 
+
+    //funcion que me permita el exponente de un numero
+
+    // 6 & 3 = 6 elevado a 3
+
+    function potencia(base , exponente){
+        return (Math.pow(base, exponente));
+    }
+    
+    potencia (5 , 2 );
+    
+    
+    
+    
+    </script>
+</body>
+</html>

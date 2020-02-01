@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="productos">
+
+        <article class="producto">
+            <h3>Titulo del Producto 1</h3>
+        </article>
+        <article class="producto">
+            <h3>Titulo del Producto 2</h3>
+        </article>
+        <article class="producto">
+            <h3>Titulo del Producto 3</h3>
+        </article>
+
+
+    </section>
+
+    <script>
+        // < !--cambiar titulo producto 2 -- >
+        var productos = document.getElementById('productos')
+        var listaProductos = productos.getElementsByClassName('producto')
+
+        for (const producto of listaProductos) {
+            console.log(producto.innerHTML)
+            var textoAcambiar = (producto.innerHTML == "<h3>Titulo del Producto 2</h3>") ? producto.innerHTML.toUpperCase() : producto.innerHTML
+            producto.innerHTML = "<h3>" + textoAcambiar + "</h3>"
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    .rojo {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <h1>Gestion de clases</h1>
+
+    <p><a id="btn1" href="http://www.google.es">Añadir clase .rojo</a></p>
+    <p><a class="rojo" id="btn2" href="#">Quitar clase .rojo</a></p>
+    <p><a id="btn3" href="#">Cambiar clase .rojo</a></p>
+
+
+    <p><a href="#"></a></p>
+
+    <ul id="menu">
+        <li><a href="#" data-color="blue">Azul</a></li>
+        <li><a href="#" data-color="red">Rojo</a></li>
+        <li><a href="#" data-color="yellow">Amarillo</a></li>
+    </ul>
+
+    <script src="archivos/jquery-3.4.1.min.js"></script>
+    <script>
+        var enlace = $("#menu li a")
+        enlace.on("click", cargarColor)
+
+        function cargarColor(event) {
+            event.preventDefault()
+            console.log($(this))
+
+            $(this).css("color", $(this).attr("data-color"))
+
+
+        }
+        var btn1 = $("#btn1")
+        var btn2 = $("#btn2")
+        var btn3 = $("#btn3")
+
+        var h1 = document.querySelector("h1")
+
+        btn1.on("click", anadirClase)
+        btn2.on("click", quitarClase)
+        btn3.on("click", cambiaClase)
+
+        function anadirClase(event) {
+            event.preventDefault()
+            var url = $(this).attr("href")
+            $("h1").addClass("rojo")
+            btn1.addClass("rojo")
+            h1.classList.add("monstruo")
+
+            setTimeout(function () {
+                window.location = url;
+            }, 3000)
+        }
+        function quitarClase(event) {
+            event.preventDefault()
+            $("h1").removeClass("rojo")
+
+            btn1.removeClass("rojo")
+            //btn1.classList.remove("rojo");
+
+        }
+
+        function cambiaClase(event) {
+            event.preventDefault()
+            $("h1").toggleClass("rojo")
+            btn1.toggleClass("rojo")
+
+        }
+
+
+    </script>
+</body>
+
+</html>

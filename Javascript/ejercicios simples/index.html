@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        // contar 1000 numeros pero empezando obligatoriamente por n
+        
+    // for (let i=1;i<=1000;i++)
+    // {if (i%2==0) console.log(i);}
+     
+    // alternativa
+    let numeroinicial = 7;
+    let espar= (numeroinicial % 2 == 0);
+    let primernumero=(espar) ?numeroinicial : numeroinicial+1;   
+    for (j=primernumero;j<=1000;j=j+2)
+    {console.log(j);}
+
+    // que valga para pares como para impares
+
+    var inicial = parseInt(promt("Valor inicial"));
+    var final = parseInt(promt("Valor final"));
+    var tipo = promt("Par o impar?");
+
+        for (var j = inicial; j <=final; j++)
+        {
+            if (j%2 == 0 && tipo == "par")
+        {console.log(j);        }
+        else if (j%2 !=0 && tipo =="impar")
+        console.log(j)
+        }
+        
+    </script>
+</body>
+</html>

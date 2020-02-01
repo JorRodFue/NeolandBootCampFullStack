@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+
+        <ul>
+            <li>
+                <a href="">Home</a> </li>
+
+            <li>
+                <a href="">Contacto</a> </li>
+
+            <li>
+                <a href="">Galeria</a> </li>
+
+        </ul>
+    </header>
+    <main>
+
+
+
+
+
+    </main>
+
+    <footer>
+
+        <ul>
+            <li><a href="">Item 1</a></li>
+            <li><a href="">Item 2</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        var headerold = document.getElementsByTagName("header")[0]
+        var enlacesHeaderOLD = headerold.getElementsByTagName("a");
+        var headernew = document.querySelector("header");
+
+        var enlacesHeaderNEW = document.querySelectorAll("header  a")
+        console.log(enlacesHeaderNEW)
+        enlacesHeaderNEW[0].style.color = "red"
+
+    </script>
+</body>
+
+</html>

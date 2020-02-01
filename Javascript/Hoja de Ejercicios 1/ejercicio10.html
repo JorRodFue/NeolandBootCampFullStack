@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function construirArray() {
+            let numeros = new Array();
+            for (let i = 0; i < 10; i++) numeros[i] = (parseInt(Math.random() * 20) - 10);
+            return numeros
+        }
+        function ordenarArray(numeros) {
+            for (let i = 0; i < numeros.length; i++) {
+                for (let j = numeros.length - 1; j > i; j--) {
+                    if (numeros[i] < numeros[j]) {
+                        let tmp = numeros[i];
+                        numeros[i] = numeros[j];
+                        numeros[j] = tmp;
+                    }
+                }
+            }
+            return numeros;
+            // Cojo el numero[0] , lo comparo con el numero[ultimo] y si es menor los cambio de puesto , asi tengo el mayor en [0] , itero y en [1] tengo el segundo mayor, etc
+        }
+
+        document.write(ordenarArray(construirArray()))
+
+
+
+    </script>
+</body>
+
+</html>

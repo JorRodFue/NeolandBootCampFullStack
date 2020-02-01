@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function pedirOperacion() {
+            var operacion = prompt("Dime operacion : SUMA, RESTA, MULTIPLICACION, DIVISION, POTENCIA").toUpperCase();
+            return operacion;
+        }
+
+        function pedirNumeros() {
+            var numeros = new Array()
+            for (let i = 1; i < 3; i++) {
+                numeros[i] = parseFloat(prompt("Dame numero:" + i))
+            }
+            return numeros
+
+        }
+
+        function operar(numeros, operacion) {
+            var resultado;
+            console.log(numeros, operacion, resultado)
+            switch (operacion) {
+                case "SUMA": {
+                    resultado = numeros[1] + numeros[2];
+                    console.log(numeros[1], numeros[2], resultado, "entramos")
+                    break;
+                }
+                case "RESTA": {
+                    resultado = numeros[1] - numeros[2];
+                    break;
+                }
+                case "MULTIPLICACION": {
+                    resultado = numeros[1] * numeros[2];
+                    break;
+                }
+                case "DIVISION": {
+                    resultado = numeros[1] / numeros[2];
+                    break;
+                }
+
+                case "POTENCIA": {
+                    resultado = numeros[1] ** numeros[2];
+                    break;
+                }
+            }
+            return resultado;
+
+        }
+
+        function mostrarResultado(resultado) {
+            var color = "black";
+            color = (resultado >= 0) ? "green" : "red";
+            salida = "<p style='color:" + color + "'> El resultado es: " + resultado + "</p>"
+            document.write(salida)
+            console.log(resultado)
+        }
+
+        mostrarResultado(operar(pedirNumeros(), pedirOperacion()))
+    </script>
+</body>
+
+</html>

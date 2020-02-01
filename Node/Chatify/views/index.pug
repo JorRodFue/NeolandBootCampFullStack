@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  p Welcome to #{title}
+  header.header 
+    img(src="https://static.tvtropes.org/pmwiki/pub/images/50286_318185126055_3927753_n18730_jpg_100.png")
+    span(class="grande") CHATIFY
+
+    nav.navbar
+     p TEXTO EN EL NAV
+  p(id="usercount") 0
+  ul(id="mensajes") Conversaciones
+     li.list-group-item conversacion.nick + conversacion.mensaje
+  div(class="row")
+    input(class="col-3 form-control" type="text", id="nick" name="nick", placeholder="nick here")
+    input(class="col-5 form-control" type="text", id="mensaje" name="mensaje", placeholder="mensaje here")
+    button(class="col-2 btn btn-primary", id="btnEnviar" name="enviar" , onclick="clicar('boton')") ENVIAR
+  script.
+   let conversaciones= new Array()
+   let socket = io();
+
+   $('#btnEnviar').click(clicar2)
+   function clicar2(){
+     console.log("clicar JQUERY")
+     }
+   function clicar (origen ="sin origen definido"){
+     console.log($('#btnEnviar'))
+        let who = document.getElementById("btnEnviar")
+         console.log(who.id)
+         socket.emit('mensajeChatCliente' , {nick : $('#nick').val() , mensaje : $('#mensaje').val()})
+        } 
+
+
+    socket.on('mensajeChatServer' , function (data) {
+      
+      
+      console.log("el socket ha recibido mensaje chat" , data)
+
+      switch (data.mode){
+        case "default":
+         $('#mensajes').append(`<li class="list-group-item"> ${data.nick} dice : ${data.mensaje} </li>`)
+         if (data.human === true)  notifyMe(data.nick, data.mensaje)
+         break 
+
+          case "contador":
+      console.log("actualizando contador")
+      $('#usercount').text(data.mensaje)
+    }})
+
+
+
+
+
+
+
+
+
+
+
+    function notifyMe(user,message) {
+      // FUNCION DE MARIO TAL CUAL
+
+      if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+      }
+      else if (Notification.permission === "granted") {
+        var options = {
+          body: message,
+          dir : "ltr"
+        };
+        var notification = new Notification(user + " ha comentado",options);
+      }
+      else if (Notification.permission !== 'denied') {
+        Notification.requestPermission(function (permission) {
+          if (!('permission' in Notification)) {
+            Notification.permission = permission;
+          }
+          if (permission === "granted") {
+            var options = {
+              body: message,
+              dir : "ltr"
+            };
+            var notification = new Notification(user + "  ha comentado",options);
+          }
+        });
+      }
+    }
+    
+
+    

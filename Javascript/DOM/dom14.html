@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Query Selector</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Titulo de mi pagina</h1>
+
+    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit autem sint quidem ab,
+        quos obcaecati impedit optio necessitatibus magnam, mollitia quasi eius a architecto quisquam. Delectus,
+        aspernatur! Quasi, alias!</p>
+
+    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit autem sint quidem ab,
+        quos obcaecati impedit optio necessitatibus magnam, mollitia quasi eius a architecto quisquam. Delectus,
+        aspernatur! Quasi, alias!</p>
+
+    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium velit autem sint quidem ab,
+        quos obcaecati impedit optio necessitatibus magnam, mollitia quasi eius a architecto quisquam. Delectus,
+        aspernatur! Quasi, alias!</p>
+
+
+    <script>
+
+        var titulo = document.querySelector("#titulo")
+        var titulo2 = document.getElementById("titulo")
+
+        titulo.style.color = "red";
+
+        console.log(titulo, titulo2)
+    </script>
+
+</body>
+
+</html>

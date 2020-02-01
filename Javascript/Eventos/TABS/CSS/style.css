@@ -1,0 +1,42 @@
+*{box-sizing:border-box;
+padding:0;
+margin:0;}
+
+
+img{width:100%}
+.wrapper{
+    max-width:900px;
+    margin:0 auto;}
+
+
+header ul{list-style:none;
+    }
+
+header ul li{display:inline-block;
+}
+
+header ul li a 
+{display:block;
+padding:10px;
+color:white;
+background-color:black;
+}
+
+header ul li:hover a{background-color:tomato;
+transition-duration:0.2s;}
+
+main .tabs{padding:10px;
+/* background-color:grey; */
+transition: opacity 1s ease-in-out;}
+
+
+ul{margin-left:10px;}
+
+
+
+.oculta
+{
+    display:none;
+    /* visibility: hidden; */
+
+}

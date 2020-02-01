@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MEtodos de refinamiento</title>
+</head>
+
+<body>
+
+
+    <div class="caja">Caja1</div>
+    <div class="caja">Caja2</div>
+    <div class="caja">Caja3</div>
+    <div class="caja">Caja4</div>
+    <div class="caja">Caja5</div>
+    <div class="caja">Caja6</div>
+    <div class="caja especial">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet consequatur eligendi obcaecati vel atque
+            omnis quaerat impedit debitis quidem ullam reiciendis cupiditate similique, fugit quam quo iusto molestiae a
+            repellat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet consequatur eligendi obcaecati vel atque
+            omnis quaerat impedit debitis quidem ullam reiciendis cupiditate similique, fugit quam quo iusto molestiae a
+            repellat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet consequatur eligendi obcaecati vel atque
+            omnis quaerat impedit debitis quidem ullam reiciendis cupiditate similique, fugit quam quo iusto molestiae a
+            repellat.</p>
+    </div>
+    <div class="caja">Caja8</div>
+    <div class="caja">Caja9</div>
+    <div class="caja">Caja10</div>
+    <script src="archivos/jquery-3.4.1.min.js"></script>
+    <script>
+
+        // EQ not 
+        $(".caja").not(".especial").not($(".caja").eq(2)).css("color", "green")
+        //FIND
+        $(".caja").find("p").text("cambiando")
+        // NEXT PREV
+        $(".especial").prev().css("font-size", "75%")
+
+        $(".especial").next().css("font-size", "50px")
+
+        //parent & children
+        $(".caja").parent().parent().css("background-color", "yellow")
+        $(".caja").children().css("background-color", "orange")
+
+    </script>
+</body>
+
+</html>

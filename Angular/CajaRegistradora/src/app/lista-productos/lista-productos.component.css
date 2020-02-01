@@ -1,0 +1,16 @@
+.contenedorProductos{
+
+    /* width:600px; */
+    overflow:auto;
+    height:200px;
+    border:1px solid black;
+}
+
+.contenedorProductos li{    display: inline-block;
+    padding:15px;
+}
+
+img {margin-left:10px;
+cursor:pointer;}
+
+/* .contenedorProductos ul{border:1px solid black;} */

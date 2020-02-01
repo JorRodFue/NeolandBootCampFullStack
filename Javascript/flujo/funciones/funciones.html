@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="hazcosas(); return false;">
+<input type="number" id="valor1">
+<input type="number" id="valor2">
+<input type="text" id="result" value="resultado">
+<input type="submit">
+   </form>
+
+    <div id="resultado">Resultado</div>
+
+<script>
+
+    //pintar una figura a elegir entre cuadrado y circulo de cualquier color y cualquier medida
+
+function hazcosas(){
+let a=parseInt(document.getElementById("valor1").value);
+let b=parseInt(document.getElementById("valor2").value);
+
+console.log(a,b)
+
+   
+
+    function media (sumando1 , sumando2)
+    {
+       return (sumando1 + sumando2) / 2;
+    }
+
+
+   let salida = document.getElementById("result");
+    salida.value = media(a,b);
+    //  media(a,b);
+    console.log(media(a,b));
+}
+</script>
+</body>
+</html>

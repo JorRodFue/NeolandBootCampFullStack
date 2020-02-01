@@ -1,0 +1,35 @@
+.escenario {
+    border: 1px solid black;
+    width: 816px;
+    margin: 0 auto;
+    height: 768px;
+    background-image: url(../images/fondo.jpg);
+    background-position: 0px 0px;
+    transition: 0.2s;
+    position: relative;
+    overflow:hidden;
+}
+
+#runner {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    transition:0.5s;
+}
+
+
+.malo
+
+{
+position:absolute;
+left:80%;
+top:88%;
+    width:50px;
+    height:50px;
+    background-color:red;
+    background-image:url("https://www.pngfind.com/pngs/m/136-1360177_seta-de-super-mario-png-download-circle-transparent.png");
+    background-size:cover;
+    border-radius:50%;
+    transition:0.5s ease-in-out;
+
+}

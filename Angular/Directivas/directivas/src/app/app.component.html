@@ -1,0 +1,26 @@
+<p [ngStyle]="estiloParrafo" [ngClass]>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ullam fugit
+  nihil
+  suscipit, dolor omnis vitae sunt
+  explicabo? Debitis dolores culpa, minus quos voluptate quia id at excepturi illo corrupti?</p>
+<label>INPUT COLOR</label>
+<input type="text" [(ngModel)]="estiloParrafo.color">
+
+<label>INPUT RANGE</label>
+<!-- <input type="range" min="12" max="120" step="1" [(ngModel)]="funcionFuente"> -->
+
+<app-semaforo></app-semaforo>
+<app-ngfor></app-ngfor>
+
+<div subrayado [ngSwitch]="departamento">
+  <p *ngSwitchCase="'Tecnología'">Departamento Tecnología</p>
+  <p *ngSwitchCase="'Electrodomésticos'">Departamento Electrodomésticos</p>
+  <p *ngSwitchCase="'Hogar'">Departamento Hogar</p>
+  <p *ngSwitchDefault>Departamento random</p>
+
+
+
+
+</div>
+
+
+<div subrayado>PEPE</div>

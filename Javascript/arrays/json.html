@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>json 2</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var alumno1 = {
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 37,
+            matricula: "A3245",
+            estado: true,
+            asignaturas: ["Fisica", "Matematicas", "Lenguaje"]
+
+        }
+
+        function alumno(nombre, apellido, edad, matricula, estado, asignaturas) {
+
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.edad = edad;
+            this.matricula = matricula;
+            this.estado = estado;
+            this.asignaturas = asignaturas;
+        }
+
+
+
+        var alumno3 = new alumno("Andres", "Vicente", 33, "ASDA", true, "Vacio")
+        var alumno4 = "", alumno_n = "";
+
+        var listaAlumnos = new Array();
+        listaAlumnos = [alumno1, alumno3, alumno4, alumno_n];
+
+        //alumnos menos de 30
+
+        listaAlumnos.forEach(alumno => {
+            // if (typeof alumno.nombre !== 'undefined') console.log(alumno.nombre)
+
+            for (const key in alumno) {
+                const element = alumno[key];
+                console.log(key, element)
+            }
+        }
+
+        )
+
+
+
+
+    </script>
+</body>
+
+</html>

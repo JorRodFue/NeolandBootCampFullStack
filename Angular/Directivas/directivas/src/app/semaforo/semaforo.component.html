@@ -1,0 +1,8 @@
+<p>semaforo works!</p>
+<button (click)="funcionCambia($event)">TOGGLE DISPLAY</button>
+<div class="semaforo" *ngIf="activar && activar" [ngClass]="{
+     verde :  colorSeleccionado =='verde', 
+     ambar :  colorSeleccionado =='ambar',
+     rojo :   colorSeleccionado =='rojo'}">
+
+</div>

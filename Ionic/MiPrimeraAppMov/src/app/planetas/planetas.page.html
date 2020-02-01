@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Planetas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>VIVA EL VINO</div>
+  <ul>
+    <li (click)="click(planeta)" *ngFor="let planeta of arrayPlanetas">{{planeta.name}}</li>
+  </ul>
+</ion-content>

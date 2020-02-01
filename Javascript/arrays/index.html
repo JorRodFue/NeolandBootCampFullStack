@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pantalla"></div>
+
+
+    <script>
+    
+    // var listaAnimales = new Array('Leon' , 'Perro' , 'Gato' , 'Periquito')
+    // let pantalla=document.getElementById("pantalla");
+    
+
+    // listaAnimales.forEach(element => {
+    //     console.log(mostrar = (element.length >4 ) ? element :"");
+    //     pantalla.innerHTML+=mostrar+" "
+    // });
+    // pantalla.innerHTML+="<hr>"
+
+    // for (const element2 of listaAnimales) {
+    //     console.log(mostrar = (element2.length >4 ) ? element2 :"");
+    //     pantalla.innerHTML+=mostrar+" "
+
+    // }
+    // pantalla.innerHTML+="<hr>"
+
+    //     for (let i=listaAnimales.length-1;i>=0; i--){
+    //     pantalla.innerHTML+=listaAnimales[i]+" ";
+    //     }
+
+    //     pantalla.innerHTML+="<hr>"
+
+            // array multidimensional
+
+
+
+        var aves = new Array('Aguila' , 'Guacamayo' ,  'Periquito' , 'Colibri')
+        var felinos = new Array('Leon','Guepardo','Pantera')
+        var anfibios = new Array('Hipopo', 'Sapo' , 'Cocodrilo')
+        var animales = new Array(aves,felinos,anfibios)
+        var nombres = new Array("aves" , "felinos" , "anfibios")
+
+        document.write("FOR CLASICO : </br>")
+
+        for (let i=0; i<animales.length;i++){
+            document.write(nombres[i])
+            for (let j=0; j< animales[i].length; j++){
+
+                document.write(animales[i][j] +" " + "</br>")
+
+            }
+            document.write("<hr>")
+
+        }
+
+        document.write("FOR EACH : </br> ")
+
+var contador =0;
+animales.forEach(subanimales => {
+    
+    document.write(nombres[contador])
+
+    subanimales.forEach(elementos =>{
+        document.write(elementos +" "  + "</br>")
+    })
+    contador++;
+document.write("<hr>")
+});
+
+var contador =0;
+
+document.write("FOR OF : </br>")
+
+
+for (const elemento of animales) {
+    document.write(nombres[contador])
+
+    for (const subelemento of elemento) {
+        document.write(subelemento +" " + "</br>")
+
+        
+    }
+    document.write("<hr>")
+
+    
+}
+
+
+
+
+    </script>
+</body>
+</html>

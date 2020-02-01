@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img [src]="empleado.imagen" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{empleado.nombre}} {{empleado.apellido}}</h5>
+                <p class="card-text">DNI : {{empleado.DNI}}.</p>
+                <p class="card-text"><small class="text-muted">{{empleado.email}}</small></p>
+                <div class="icono" [ngSwitch]="empleado.departamento">
+                    <img [src]="'assets/iconcomputer.png'" *ngSwitchCase="'informatica'">
+                    <img [src]="'assets/iconcomputer2.png'" *ngSwitchCase="'diseño'">
+                    <img [src]="'assets/humanresources.png'" *ngSwitchCase="'recursoshumanos'">
+                </div>
+            </div>
+            <div>
+            </div>
+            <div>

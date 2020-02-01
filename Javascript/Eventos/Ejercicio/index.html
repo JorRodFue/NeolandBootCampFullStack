@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="imagen">
+        <img src="">
+    </div>
+    <!-- <button onclick="mover(this)">anterior</button>
+    <button onclick="mover(this)">siguiente</button> -->
+    <button>anterior</button>
+    <button>siguiente</button>
+</body>
+
+<script>
+    var imagen = document.querySelector("#imagen img")
+    imagen.src = "images/imagen_0.jpg"
+    var imagenestotales = 4;
+    function mover(objeto) {
+        let accion = objeto.innerText;
+        index = imagen.src[imagen.src.length - 5]
+        // le capturo el numero de la url
+        switch (accion) {
+            case "anterior":
+                index--
+                index = (index < 0) ? imagenestotales - 1 : index
+                break
+            case "siguiente":
+                index++
+                index = (index % imagenestotales)
+                break
+        }
+        dibujarImagen(imagen, index)
+    }
+
+    function dibujarImagen(imagen, index) {
+        imagen.src = "images/imagen_" + index + ".jpg"
+    }
+
+
+    botones = document.querySelectorAll("button");
+    for (const boton of botones) {
+
+        boton.addEventListener("click", mover)
+    }
+</script>
+
+</html>

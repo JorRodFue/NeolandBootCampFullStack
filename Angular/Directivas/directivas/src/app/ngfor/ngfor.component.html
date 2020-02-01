@@ -1,0 +1,36 @@
+<p>ngfor works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let episodio of episodios">
+            <td>{{episodio.title}}</td>
+            <td>{{episodio.director}}</td>
+
+        </tr>
+
+
+    </tbody>
+
+</table>
+<ul>
+    <li *ngFor="let episodio of episodios; let i = index;" [ngClass]="{filaPar: (i%2==0) , filaImpar: i%2!=0}">
+        {{i}} {{index}}-- {{episodio.title}} - {{episodio.director}}
+        <p *ngIf="last">Soy el ultimo</p>
+    </li>
+</ul>
+<style>
+    .filaImpar {
+        background-color: green;
+    }
+
+    .filaPar {
+        background-color: yellow;
+    }
+</style>
+<!-- index, even, odd, first , last -->

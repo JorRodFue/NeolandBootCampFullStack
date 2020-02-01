@@ -1,0 +1,19 @@
+#container{
+
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#container >div{width:48%}
+
+#izquierdo {overflow:auto;
+height:90vh;}
+
+#izquierdo li{
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+#mapid { height: 100vh; }
+
+.leaflet-popup-content{width:600px !important;}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TODO's list</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<script src="js/modelo.js"></script>
+	<div id="wrapper">
+
+		<header>
+
+			<div class="insert">
+				<form action="#" method="get">
+					<input type="text" id="tituloTarea" placeholder="Introduce una tarea">
+					<select id="prioridad" required>
+						<option value="">Selecciona una prioridad</option>
+						<option value="urgente">Urgente</option>
+						<option value="diaria">Diaria</option>
+						<option value="mensual">Mensual</option>
+					</select>
+
+					<input type="submit" id="guardar" value="Guardar">
+				</form>
+
+
+			</div>
+
+			<div class="filter">
+
+				<select id="prioridadFilter">
+					<option value="">Selecciona una prioridad</option>
+					<option value="urgente">Urgente</option>
+					<option value="diaria">Diaria</option>
+					<option value="mensual">Mensual</option>
+				</select>
+
+				<input type="text" id="search" placeholder="Introduce una tarea a buscar">
+
+
+			</div>
+
+		</header>
+		<main>
+
+			<section class="tareas" id="tareas">
+
+			</section>
+
+
+			<p id="mensaje"></p>
+		</main>
+		<footer>
+			APP TODO JUAN
+		</footer>
+		<p id="mensaje"></p>
+	</div>
+
+	<script src="js/vista.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/eventos.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let objeto = { persona: "humana", calidad: "poca" }
+        let array = ["persona", "cosa"]
+        var copiadearray = [...array];
+        let copiadeobjeto = objeto;
+        console.log(copiadeobjeto)
+        copiadearray[0] = "inhumano"
+        copiadeobjeto.persona = "inhumana"
+        console.log(objeto, array)
+        var listaCompra = new Array("Lechuga", "Tomate", "Carne", "Pescado", "Fruta")
+        for (const producto of listaCompra) {
+            var div = document.createElement("div");
+            var texto = div.innerHTML = producto
+            document.body.appendChild(div)
+        }
+        document.body.innerHTML += "<hr>"
+        listaCompra.forEach(function (element, index, array) {
+            console.log(index)
+            var div = document.createElement("div");
+            var texto = div.innerHTML = element
+            document.body.appendChild(div)
+        });
+
+        var nombre = "23"
+        console.log(Array.from(nombre))
+
+
+        var persona = {
+            nombre: "Juan", apellido: "Peres", edad: 37, sacarnombre: function (parametro = "") { return this.nombre + " " + this.apellido + " " + parametro }
+        }
+        2
+        console.log(persona.sacarnombre("parametro"))
+    </script>
+
+</body>
+
+
+
+
+</html>

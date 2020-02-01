@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="lienzo">
+    </section>
+    <script>
+        // cuadrado verde medida y un cuadrado rojo
+        function dibujarCuadrados(numero, medidas) {
+
+            //PARTE HTML
+            numero = numero * 2
+            let lienzo = document.getElementById("lienzo");
+
+            let cuadrado
+            for (let i = 0; i < numero; i++) {
+                console.log(i)
+                lienzo.innerHTML += "<div>" + i + "</div>"
+                let cuadrado = lienzo.getElementsByTagName("div")[i];
+                cuadrado.style.backgroundColor = (i % 2 == 0) ? "red" : "green";
+                cuadrado.style.width = medidas + "px";
+                cuadrado.style.height = medidas + "px";
+            }
+            //PARTE ESTYLOS
+            // let cuadrados = lienzo.getElementsByTagName("div")
+            // for (let j = 0; j < cuadrados.length; j++) {
+            //     cuadrados[j].style.backgroundColor = (j % 2 == 0) ? "red" : "green";
+            //     cuadrados[j].style.width = medidas + "px";
+            //     cuadrados[j].style.height = medidas + "px";
+            // }
+        }
+
+        dibujarCuadrados(6, 100)
+
+    </script>
+</body>
+
+</html>

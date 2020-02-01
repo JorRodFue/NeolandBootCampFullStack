@@ -1,0 +1,11 @@
+*{box-sizing:border-box}
+
+.no-gutters {
+    margin-right: 10px;
+    margin-left: 10px;
+  
+  
+      padding-right: 0;
+      padding-left: 0;
+    }
+ 

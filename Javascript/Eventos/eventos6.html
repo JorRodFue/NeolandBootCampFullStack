@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li data-color="blue" data-transition="1s">Azul</li>
+        <li data-color="green" data-transition="5s">Verde</li>
+        <li data-color="red" data-transition="10s">Rojo</li>
+    </ul>
+    <div id="texto"></div>
+    <script>
+        var botones = document.querySelectorAll("#menu li")
+        botones.forEach(boton => {
+            boton.addEventListener("click", hacercosas)
+        });
+
+        function hacercosas(event) {
+            event.target.dataset.texto = event.target.innerText;
+
+            cambiarColor(event.target.dataset)
+        }
+
+        function cambiarColor(dataset) {
+            document.body.style.backgroundColor = dataset.color;
+            document.body.style.transition = dataset.transition;
+            document.querySelector("#texto").innerText = dataset.texto;
+        }
+
+    </script>
+</body>
+
+</html>

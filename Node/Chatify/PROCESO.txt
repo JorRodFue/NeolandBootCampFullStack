@@ -1,0 +1,5 @@
+install socket.io
+te vas al www y let io = require ('socket.io')(server)
+
+hay que cerrar y rearrancar para que funsione, no vale nodemon
+acuerdate de actualizar la vista (F5)

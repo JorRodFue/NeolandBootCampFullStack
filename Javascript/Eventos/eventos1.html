@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li id="blue" onclick="cambiarColor(this)" onmouseover="ponerMayusculas(this)">Azul</li>
+        <li id="green" onclick="cambiarColor(this)" onmouseover="ponerMayusculas(this)">Verde</li>
+        <li id="red" onclick="cambiarColor(this)" onmouseover="ponerMayusculas(this)">Rojo</li>
+    </ul>
+
+
+    <script>
+
+        function cambiarColor(objeto) {
+            objeto.style.color = objeto.id;
+            console.log()
+        }
+
+
+        function ponerMayusculas(Objeto) {
+            Objeto.innerText = Objeto.innerText.toUpperCase()
+        }
+
+    </script>
+</body>
+
+</html>

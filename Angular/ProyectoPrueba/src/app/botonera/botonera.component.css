@@ -1,0 +1,34 @@
+#wrapper {width:220px;
+margin:auto;
+border:2px solid black;
+/* height:400px; */
+}
+
+
+#botonera , #operandos{
+    margin:0 auto;
+display:flex;
+flex-wrap:wrap;
+
+width:200px;
+
+}
+
+#botonera button{
+
+    width:33%;
+}
+
+#operandos button{
+    width:25%;}
+
+
+
+#botonera button:last-child , #operandos button:last-child{
+    width:99%;}
+
+    #pantalla {max-width:100%;
+        margin:auto;
+        height:50px;
+        text-align:center;
+    border:1px solid black;}

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to lista personas
+
+  table.table
+    thead
+      th Nombre
+      th Apellidos
+      th Edad
+      th Email
+      th nombre completo por metodo virtual
+      th ACCIONES
+
+    each persona in arrayPersonas
+      tr
+       td=persona.nombre
+       td=persona.apellidos
+
+       td=persona.edad
+       td=persona.email
+       td=persona.nombre_completo
+       td
+         a.btn.btn-primary(href="/personas/edit/"+persona._id) EDITAR
+         a.btn.btn-primary(onclick="if (confirm('SEGURO?') ) window.location.href = '/personas/delete/"+persona._id+"'") BORRAR
+
+
+  a.btn.btn-primary(href="/personas/new/") CREAR
+
+

@@ -1,0 +1,371 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
+
+/*
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+*{box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    font-size:1em;
+}
+
+img{
+    width:100%;
+    height:auto;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.row:after{
+    clear:both;
+    content:"";
+    height:0;
+    display:block;
+}
+
+/* inicio header */
+
+
+.headersup{
+    background-color:#21242e;
+    padding: 20px 0;
+}
+
+.headersup a{
+    color:white;
+    text-decoration:none;
+}
+
+
+header .headersup .container div{
+float:left;
+width:25%;
+text-align:center;
+}
+
+header .headersup .container a .fas {color:#fa5734}
+
+header .headersup .container div a span{
+    display:none;
+}
+
+
+header nav {
+padding:20px 10px;
+
+}
+
+header nav .logo{
+    max-width:100px;
+    height:auto;
+    float:left;}
+
+
+    header nav .hamburguesa {
+        float:right;
+        cursor:pointer;
+    }
+
+    header nav .hamburguesa .linea{
+        border-top:2px solid #aaa;
+        margin-bottom:10px;
+        width:30px;
+
+    }
+
+    header nav ul {
+        padding-top:80px;
+    }
+
+    header nav ul li{
+        text-align:center;
+    }
+
+    header nav ul li a{
+        display:inline-block;
+        text-decoration:none;
+        color:grey;
+        padding:15px 0;
+        border-bottom:1px solid grey;
+        width:100%;
+
+    }
+
+    header nav ul li:last-child() a{
+        border:none;}
+
+    header nav ul li a:hover{
+        color:#fa5734;
+    }
+
+    header nav ul li a.active{ 
+               color:#fa5734;
+    }
+
+/*TABLET*/
+
+    @media (min-width:526px)
+
+    {
+    
+        .headersup{
+            padding:20px 10px;
+            font-size:70%;
+
+
+            
+        }
+
+        header .headersup .container div a span{
+            display:inline-block;
+        }
+
+        header .headersup .container div:nth-child(n){
+            text-align:left;
+
+
+        }
+
+        header .headersup .container div:nth-child(n+3){
+            text-align:right;
+    }
+      header nav .hamburguesa{
+          float:none;
+          display:none;
+      }
+      header nav ul {
+       float:right;
+       padding-top:0px;
+
+    }
+
+    header nav ul li{
+        display:inline-block;
+
+    }
+
+    header nav ul li a{
+        border-bottom:none;
+        padding: 10px 10px 0px 10px;
+    }
+
+}
+
+/*INICIO HERO*/
+
+.hero{
+    height:70vh;
+    background-image: url('../images/fondo.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-color:rgb(45, 45, 45);
+    background-blend-mode:soft-light;
+}
+
+.hero>div{
+    padding:10% 10px;
+}
+
+.hero>div h1{
+font-size:2.66em;
+color:white;
+font-family: 'Handlee', cursive;
+}
+.hero>div h2{
+    font-size:1.46em;
+    color:#fa573A;
+    margin:.8em 0px;
+}
+
+.hero>div p{color:white;}
+
+.boton{background-color:red;
+color:white;
+padding:.9em;
+display:inline-block;
+margin:.8em 0px;
+border:1px solid red;
+text-decoration:none;
+transition:1s;
+animation-delay:1s;
+}
+
+.boton:hover{background-color:transparent;
+color:red;
+}
+
+.hero .social li{
+
+    display:inline-block;
+}
+
+.hero .social li a{
+    text-decoration:none;
+color:white;
+size:150%;
+margin-left:10px;}
+
+@media (min-width:526px){
+
+
+.hero {height:70vh;}
+}
+
+/*FIN HERO*/
+
+/*INICIO MAIN */
+
+main section{
+    padding:50px 0px;
+}
+
+main section h2{color:black;
+font-family:'Handlee' , cursive;
+font-size:2em;
+text-align:center;}
+
+main section h2 span{color:#fa573A;}
+main section .underline{width:10em;
+margin:auto;
+position:relative;
+color:#fa5734;}
+main section .underline hr{color:#fa573A;}
+main section .underline span{font-weight:bold;
+display:block;
+position:absolute;
+left:50%;
+top:-7px;}
+
+main section .flex{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+main section .flex article{
+    padding:20px 10px;
+    border-bottom:1px solid grey;
+    
+}
+
+main section .flex .icon {
+ color:#fa573A;
+ border: 2px solid #fa573A;
+ padding:10px;
+ font-size:150%;
+}
+
+main section article h3{
+    margin:15px 0;
+    font-weight:700;
+    font-size:120%;
+}
+main section article p{
+color:#aaa;
+margin-bottom:10px;}
+
+main section article .enlace{
+    color:red;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.fa-truck-moving{transform: rotateY(180DEG)}
+
+.enlace:hover i{
+transform: translateX(10px);
+transition:1s;
+}
+
+
+/*seccion 2*/
+
+main section .imagen
+{width: 90%;
+cursor:pointer;}
+
+main .columna {width:100%;
+padding:10px;
+}
+
+main h4{color:#fa573A;
+font-size:110%;
+margin-bottom:10px;}
+
+main section .imagen img{display:block;
+    transform:rotateZ(-10DEG);}
+
+
+
+main section .imagen .marco {border:3px solid #fa573A;
+    transform:rotateZ(10deg);}
+
+
+
+main section .imagen:hover .marco{
+    transform:rotateZ(0deg);}
+
+    main section .imagen:hover .marco img{
+        transform:rotateZ(0DEG);}
+
+
+
+
+
+
+@media (min-width:526px){
+
+    main section .flex article{
+        width:50%;
+        border:0;
+        padding:20px;
+    }
+    main section .flex article:nth-last-child(1){
+        width:100%;
+    }
+
+    main section .flex article:nth-last-child(2){border-left:1px solid grey;}
+
+
+
+    main .flex .columna {
+        width:50%;
+    
+        }
+    
+
+}
+
+@media (min-width:800px){
+    main section .flex article{
+
+    width:33%;
+    border-left:1px solid grey;
+}
+
+main section .flex article:nth-last-child(1){
+    width:33%;
+}
+/* main .flex .columna {width:50%} */
+
+}
+
+/*FOOTER */
+
+
+footer{
+    background-color:#21242e;
+    padding: 20px 0;
+    color:white;
+}
+
+footer a{color:#fa573A;
+text-decoration:none;}
